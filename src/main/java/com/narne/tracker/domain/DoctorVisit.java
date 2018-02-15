@@ -1,7 +1,12 @@
 package com.narne.tracker.domain;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+
 public class DoctorVisit {
 
+    @Id
+    private ObjectId _id;
 	private String petId;	
 	private String doctorName;	
 	private String visitDate;	
@@ -37,6 +42,14 @@ public class DoctorVisit {
 
 	public void setVisitReason(String visitReason) {
 		this.visitReason = visitReason;
+	}
+	
+	public ObjectId getId() {
+		return _id;
+	}
+
+	public void setId(ObjectId id) {
+		this._id = id;
 	}
 	
 	

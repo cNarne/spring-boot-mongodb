@@ -32,7 +32,7 @@
                 <td th:text="${pet.name}"></td>
                 <td th:text="${pet.species}"></td>
                 <td th:text="${pet.birthday}"></td>
-                <td><a th:href="${'/doctor/list/' + pet.id.toHexString()}">View Doctor Visits</a> </td>
+                <td><a th:href="@{/doctor/list(id=${pet.id})}">View Doctor Visits</a> </td>
                 <td><a th:href="${'/pet/edit/' + pet.id.toHexString()}">Edit</a> </td>
                 <td><a th:href="${'/pet/delete/' + pet.id.toHexString()}">Delete</a> </td>
             </tr>

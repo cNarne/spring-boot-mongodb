@@ -12,5 +12,7 @@ public class SpringBootMongodbApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
+	
+	
 
 }

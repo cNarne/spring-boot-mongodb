@@ -28,18 +28,19 @@
                 <th>Delete</th>
             </tr>
             <tr th:each="doctorVisit : ${doctorVisits}">
-                <td th:text="${doctorVisit.petId.toHexString()}"></td>
+                <td th:text="${doctorVisit.petId}"></td>
                 <td th:text="${doctorVisit.doctorName}"></td>
                 <td th:text="${doctorVisit.visitDate}"></td>
                 <td th:text="${doctorVisit.visitReason}"></td>
-                <td><a th:href="${'/doctor/edit/' + pet.id.toHexString()}">Edit</a> </td>
-                <td><a th:href="${'/doctor/delete/' + pet.id.toHexString()}">Delete</a> </td>
+                <td><a th:href="${'/doctor/edit/' + doctorVisit.id.toHexString()}">Edit</a> </td>
+                <td><a th:href="${'/doctor/delete/' + doctorVisit.id.toHexString()}">Delete</a> </td>
             </tr>
         </table>
     </div>
     <div class="row">
         <div class="col-sm-3">
-           <a th:href="${'/doctor/new/' + *{id}}">New Visit</a>
+        <a th:href="@{'/doctor/new'(id=${#request.getParameter('id')})}"> New Visit</a>
+           <a href="/doctor/new">New Visit</a>
         </div>
     </div>
 </div>

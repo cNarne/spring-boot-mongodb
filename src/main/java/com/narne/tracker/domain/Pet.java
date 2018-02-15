@@ -1,26 +1,24 @@
 package com.narne.tracker.domain;
 
-
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 public class Pet {
-	
-    @Id
-    private ObjectId _id;
-    private String name;
-    private String species;
-    private String birthday;
-    private String imageUrl;
 
-    
-    public String getImageUrl() {
-        return imageUrl;
-    }
+	@Id
+	private ObjectId _id;
+	private String name;
+	private String species;
+	private String birthday;
+	private String imageUrl;
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 
 	public String getBirthday() {
 		return birthday;
@@ -46,11 +44,11 @@ public class Pet {
 		this.name = name;
 	}
 
-	 public ObjectId getId() {
-	        return _id;
-	    }
+	public ObjectId getId() {
+		return _id;
+	}
 
-	    public void setId(ObjectId id) {
-	        this._id = id;
-	    }
+	public void setId(ObjectId id) {
+		this._id = id;
+	}
 }

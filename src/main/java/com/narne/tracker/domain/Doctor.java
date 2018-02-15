@@ -1,13 +1,10 @@
 package com.narne.tracker.domain;
 
-import org.springframework.data.annotation.Id;
-
 public class Doctor {
 	
-	@Id
+
 	private String doctorName;
-	private long doctorId;
-	
+	private long doctorId;	
 	private String city;
 	
 	public String getCity() {
